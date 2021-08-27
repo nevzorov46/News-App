@@ -10,15 +10,15 @@
 		1FDE5D4B7998872C2DF25CDC /* Pods_News_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A1CF11C4D7E9B3F0FB7B75A /* Pods_News_App.framework */; };
 		F64AEB5726D6D9B70077D713 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64AEB5626D6D9B70077D713 /* APICaller.swift */; };
 		F64AEB5C26D7A30A0077D713 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64AEB5B26D7A30A0077D713 /* NewsTableViewCell.swift */; };
-		F64AEB6726D7B1B10077D713 /* Merriweather-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F64AEB5E26D7B1B00077D713 /* Merriweather-BoldItalic.ttf */; };
-		F64AEB6826D7B1B10077D713 /* Merriweather-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F64AEB5F26D7B1B00077D713 /* Merriweather-LightItalic.ttf */; };
-		F64AEB6926D7B1B10077D713 /* Merriweather-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F64AEB6026D7B1B00077D713 /* Merriweather-Light.ttf */; };
-		F64AEB6A26D7B1B10077D713 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = F64AEB6126D7B1B00077D713 /* OFL.txt */; };
-		F64AEB6B26D7B1B10077D713 /* Merriweather-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F64AEB6226D7B1B10077D713 /* Merriweather-BlackItalic.ttf */; };
-		F64AEB6C26D7B1B10077D713 /* Merriweather-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F64AEB6326D7B1B10077D713 /* Merriweather-Bold.ttf */; };
-		F64AEB6D26D7B1B10077D713 /* Merriweather-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F64AEB6426D7B1B10077D713 /* Merriweather-Italic.ttf */; };
-		F64AEB6E26D7B1B10077D713 /* Merriweather-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F64AEB6526D7B1B10077D713 /* Merriweather-Regular.ttf */; };
-		F64AEB6F26D7B1B10077D713 /* Merriweather-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F64AEB6626D7B1B10077D713 /* Merriweather-Black.ttf */; };
+		F64AEB7926D8CCB00077D713 /* Merriweather-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F64AEB7026D8CCAE0077D713 /* Merriweather-Black.ttf */; };
+		F64AEB7A26D8CCB00077D713 /* Merriweather-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F64AEB7126D8CCAF0077D713 /* Merriweather-Regular.ttf */; };
+		F64AEB7B26D8CCB00077D713 /* Merriweather-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F64AEB7226D8CCAF0077D713 /* Merriweather-Italic.ttf */; };
+		F64AEB7C26D8CCB00077D713 /* Merriweather-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F64AEB7326D8CCAF0077D713 /* Merriweather-BlackItalic.ttf */; };
+		F64AEB7D26D8CCB00077D713 /* Merriweather-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F64AEB7426D8CCAF0077D713 /* Merriweather-Light.ttf */; };
+		F64AEB7E26D8CCB00077D713 /* Merriweather-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F64AEB7526D8CCAF0077D713 /* Merriweather-LightItalic.ttf */; };
+		F64AEB7F26D8CCB00077D713 /* Merriweather-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F64AEB7626D8CCB00077D713 /* Merriweather-Bold.ttf */; };
+		F64AEB8026D8CCB00077D713 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = F64AEB7726D8CCB00077D713 /* OFL.txt */; };
+		F64AEB8126D8CCB00077D713 /* Merriweather-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F64AEB7826D8CCB00077D713 /* Merriweather-BoldItalic.ttf */; };
 		F6728BC126D6637B00741683 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6728BC026D6637B00741683 /* AppDelegate.swift */; };
 		F6728BC326D6637B00741683 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6728BC226D6637B00741683 /* SceneDelegate.swift */; };
 		F6728BC526D6637B00741683 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6728BC426D6637B00741683 /* ViewController.swift */; };
@@ -34,15 +34,15 @@
 		8A1CF11C4D7E9B3F0FB7B75A /* Pods_News_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_News_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F64AEB5626D6D9B70077D713 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
 		F64AEB5B26D7A30A0077D713 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NewsTableViewCell.swift; path = Services/NewsTableViewCell.swift; sourceTree = "<group>"; };
-		F64AEB5E26D7B1B00077D713 /* Merriweather-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Merriweather-BoldItalic.ttf"; path = "../../../../../Downloads/Merriweather/Merriweather-BoldItalic.ttf"; sourceTree = "<group>"; };
-		F64AEB5F26D7B1B00077D713 /* Merriweather-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Merriweather-LightItalic.ttf"; path = "../../../../../Downloads/Merriweather/Merriweather-LightItalic.ttf"; sourceTree = "<group>"; };
-		F64AEB6026D7B1B00077D713 /* Merriweather-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Merriweather-Light.ttf"; path = "../../../../../Downloads/Merriweather/Merriweather-Light.ttf"; sourceTree = "<group>"; };
-		F64AEB6126D7B1B00077D713 /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = OFL.txt; path = ../../../../../Downloads/Merriweather/OFL.txt; sourceTree = "<group>"; };
-		F64AEB6226D7B1B10077D713 /* Merriweather-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Merriweather-BlackItalic.ttf"; path = "../../../../../Downloads/Merriweather/Merriweather-BlackItalic.ttf"; sourceTree = "<group>"; };
-		F64AEB6326D7B1B10077D713 /* Merriweather-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Merriweather-Bold.ttf"; path = "../../../../../Downloads/Merriweather/Merriweather-Bold.ttf"; sourceTree = "<group>"; };
-		F64AEB6426D7B1B10077D713 /* Merriweather-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Merriweather-Italic.ttf"; path = "../../../../../Downloads/Merriweather/Merriweather-Italic.ttf"; sourceTree = "<group>"; };
-		F64AEB6526D7B1B10077D713 /* Merriweather-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Merriweather-Regular.ttf"; path = "../../../../../Downloads/Merriweather/Merriweather-Regular.ttf"; sourceTree = "<group>"; };
-		F64AEB6626D7B1B10077D713 /* Merriweather-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Merriweather-Black.ttf"; path = "../../../../../Downloads/Merriweather/Merriweather-Black.ttf"; sourceTree = "<group>"; };
+		F64AEB7026D8CCAE0077D713 /* Merriweather-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Merriweather-Black.ttf"; sourceTree = "<group>"; };
+		F64AEB7126D8CCAF0077D713 /* Merriweather-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Merriweather-Regular.ttf"; sourceTree = "<group>"; };
+		F64AEB7226D8CCAF0077D713 /* Merriweather-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Merriweather-Italic.ttf"; sourceTree = "<group>"; };
+		F64AEB7326D8CCAF0077D713 /* Merriweather-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Merriweather-BlackItalic.ttf"; sourceTree = "<group>"; };
+		F64AEB7426D8CCAF0077D713 /* Merriweather-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Merriweather-Light.ttf"; sourceTree = "<group>"; };
+		F64AEB7526D8CCAF0077D713 /* Merriweather-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Merriweather-LightItalic.ttf"; sourceTree = "<group>"; };
+		F64AEB7626D8CCB00077D713 /* Merriweather-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Merriweather-Bold.ttf"; sourceTree = "<group>"; };
+		F64AEB7726D8CCB00077D713 /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
+		F64AEB7826D8CCB00077D713 /* Merriweather-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Merriweather-BoldItalic.ttf"; sourceTree = "<group>"; };
 		F6728BBD26D6637B00741683 /* News-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "News-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6728BC026D6637B00741683 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F6728BC226D6637B00741683 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -96,15 +96,15 @@
 		F64AEB5D26D7B19F0077D713 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				F64AEB6626D7B1B10077D713 /* Merriweather-Black.ttf */,
-				F64AEB6226D7B1B10077D713 /* Merriweather-BlackItalic.ttf */,
-				F64AEB6326D7B1B10077D713 /* Merriweather-Bold.ttf */,
-				F64AEB5E26D7B1B00077D713 /* Merriweather-BoldItalic.ttf */,
-				F64AEB6426D7B1B10077D713 /* Merriweather-Italic.ttf */,
-				F64AEB6026D7B1B00077D713 /* Merriweather-Light.ttf */,
-				F64AEB5F26D7B1B00077D713 /* Merriweather-LightItalic.ttf */,
-				F64AEB6526D7B1B10077D713 /* Merriweather-Regular.ttf */,
-				F64AEB6126D7B1B00077D713 /* OFL.txt */,
+				F64AEB7026D8CCAE0077D713 /* Merriweather-Black.ttf */,
+				F64AEB7326D8CCAF0077D713 /* Merriweather-BlackItalic.ttf */,
+				F64AEB7626D8CCB00077D713 /* Merriweather-Bold.ttf */,
+				F64AEB7826D8CCB00077D713 /* Merriweather-BoldItalic.ttf */,
+				F64AEB7226D8CCAF0077D713 /* Merriweather-Italic.ttf */,
+				F64AEB7426D8CCAF0077D713 /* Merriweather-Light.ttf */,
+				F64AEB7526D8CCAF0077D713 /* Merriweather-LightItalic.ttf */,
+				F64AEB7126D8CCAF0077D713 /* Merriweather-Regular.ttf */,
+				F64AEB7726D8CCB00077D713 /* OFL.txt */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -213,18 +213,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F64AEB6A26D7B1B10077D713 /* OFL.txt in Resources */,
-				F64AEB6926D7B1B10077D713 /* Merriweather-Light.ttf in Resources */,
-				F64AEB6826D7B1B10077D713 /* Merriweather-LightItalic.ttf in Resources */,
-				F64AEB6D26D7B1B10077D713 /* Merriweather-Italic.ttf in Resources */,
 				F6728BCD26D6637D00741683 /* LaunchScreen.storyboard in Resources */,
-				F64AEB6E26D7B1B10077D713 /* Merriweather-Regular.ttf in Resources */,
+				F64AEB8026D8CCB00077D713 /* OFL.txt in Resources */,
+				F64AEB7B26D8CCB00077D713 /* Merriweather-Italic.ttf in Resources */,
+				F64AEB7F26D8CCB00077D713 /* Merriweather-Bold.ttf in Resources */,
+				F64AEB7C26D8CCB00077D713 /* Merriweather-BlackItalic.ttf in Resources */,
 				F6728BCA26D6637D00741683 /* Assets.xcassets in Resources */,
-				F64AEB6726D7B1B10077D713 /* Merriweather-BoldItalic.ttf in Resources */,
-				F64AEB6C26D7B1B10077D713 /* Merriweather-Bold.ttf in Resources */,
 				F6728BC826D6637B00741683 /* Main.storyboard in Resources */,
-				F64AEB6B26D7B1B10077D713 /* Merriweather-BlackItalic.ttf in Resources */,
-				F64AEB6F26D7B1B10077D713 /* Merriweather-Black.ttf in Resources */,
+				F64AEB7E26D8CCB00077D713 /* Merriweather-LightItalic.ttf in Resources */,
+				F64AEB7926D8CCB00077D713 /* Merriweather-Black.ttf in Resources */,
+				F64AEB7D26D8CCB00077D713 /* Merriweather-Light.ttf in Resources */,
+				F64AEB8126D8CCB00077D713 /* Merriweather-BoldItalic.ttf in Resources */,
+				F64AEB7A26D8CCB00077D713 /* Merriweather-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

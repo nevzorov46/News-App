@@ -10,9 +10,10 @@ import SDWebImage
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    let placeholderURL = "https://www.industry.gov.au/sites/default/files/August%202018/image/news-placeholder-738.png"
     @IBOutlet weak var news: UITableView!
     var response: [Article] = []
-
+    var selectedNews: Article?
     var refresh: UIRefreshControl {
         let ref = UIRefreshControl()
         ref.addTarget(self, action: #selector(handleRefresh(_:)), for: .valueChanged)
@@ -20,8 +21,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return ref
     }
     
-    
     @objc func handleRefresh(_ control: UIRefreshControl)  {
+        getNews()
+        control.endRefreshing()
+    }
+    
+    private func getNews() {
         NetworkService.shared.getNews { result in
             guard let news = result else {
                 print("Can't get News")
@@ -32,28 +37,27 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 self.news.reloadData()
             }
         }
-        
-        control.endRefreshing()
     }
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
         addGradient()
         news.delegate = self
         news.dataSource = self
         news.addSubview(refresh)
-  
-        NetworkService.shared.getNews { result in
-            guard let news = result else {
-                print("Can't get News")
-                return
-            }
-            self.response = news.articles
-            DispatchQueue.main.async {
-                self.news.reloadData()
-            }
-        }
+        
+        getNews()
+        setupNavigationItem()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: animated)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -64,17 +68,31 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: NewsTableViewCell = tableView.dequeueReusableCell(withIdentifier: "News", for: indexPath) as! NewsTableViewCell
         let article = self.response[indexPath.row]
+        let imageURL = URL(string: article.urlToImage ?? placeholderURL)
         cell.newsHeader.text = article.title
         cell.newsSource.text = article.source.name
         cell.newsDescription.text = article.content ?? article.description
         cell.mainImage.layer.cornerRadius = 15
         cell.mainImage.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
-        cell.mainImage.sd_setImage(with: URL(string: article.urlToImage ?? "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjCAfVgATBaPFFWX2WWJF6x-gVW4P1mdvfKA&usqp=CAU"), completed: nil)
-        
+        cell.mainImage.sd_setImage(with: imageURL, placeholderImage: UIImage(named: "Placeholder"), completed: nil)
+ 
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let news = response[indexPath.row]
+        selectedNews = news
+        performSegue(withIdentifier: "openDetails", sender: nil)
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "openDetails", let vc = segue.destination as? DetailsViewController, let news = selectedNews {
+            vc.news = news
+        }
+    }
 
-    fileprivate func addGradient() {
+    private func addGradient() {
         let layer = CAGradientLayer()
         layer.frame = view.bounds
         layer.colors = [UIColor.black.cgColor, UIColor.darkGray.cgColor]
@@ -83,5 +101,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         view.layer.insertSublayer(layer, at: 0)
     }
     
+   
+    private func setupNavigationItem() {
+        self.navigationController?.navigationBar.tintColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        navigationItem.backButtonTitle = ""
+    }
+  
 }
 

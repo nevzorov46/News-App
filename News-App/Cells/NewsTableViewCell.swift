@@ -10,9 +10,7 @@ import UIKit
 class NewsTableViewCell: UITableViewCell {
 
     @IBOutlet weak var mainImage: UIImageView!
-    
     @IBOutlet weak var newsHeader: UILabel!
     @IBOutlet weak var newsSource: UILabel!
-    
     @IBOutlet weak var newsDescription: UILabel!
 }

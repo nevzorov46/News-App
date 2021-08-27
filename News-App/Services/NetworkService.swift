@@ -29,10 +29,7 @@ class NetworkService {
                 return
             }
             guard let data = data else { return }
-            //print(String(decoding: data, as: UTF8.self))
-            
             let news: T? = self.parseJSON(data: data)
-            //print(place[0].placeName)
             completionHandler?(news)
 
         })

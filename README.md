@@ -1,7 +1,7 @@
 # News-App
 
 
-This app - is the test task for iOS starting position in the "FINAL".
+This app - is the test task for iOS starting position in the "FINAM".
 The app - is the list of the top news of the USA:
 
 ![1](https://user-images.githubusercontent.com/54248784/131170092-8918e83f-3eb3-4a89-859c-316aaa14c70c.png)

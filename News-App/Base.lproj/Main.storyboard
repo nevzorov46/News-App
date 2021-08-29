@@ -15,9 +15,6 @@
         <array key="Merriweather-Light.ttf">
             <string>Merriweather-Light</string>
         </array>
-        <array key="Merriweather-Regular.ttf">
-            <string>Merriweather-Regular</string>
-        </array>
     </customFonts>
     <scenes>
         <!--View Controller-->
@@ -36,7 +33,7 @@
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="News" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="icG-G6-xnP">
-                                            <rect key="frame" x="25" y="30" width="125" height="56"/>
+                                            <rect key="frame" x="25" y="18" width="125" height="68"/>
                                             <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="56"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
@@ -47,7 +44,7 @@
                                         <constraint firstAttribute="bottom" secondItem="icG-G6-xnP" secondAttribute="bottom" id="Dbg-pt-N3S"/>
                                         <constraint firstItem="icG-G6-xnP" firstAttribute="leading" secondItem="zEW-vq-A4z" secondAttribute="leading" constant="25" id="Qw1-tn-hcr"/>
                                         <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="icG-G6-xnP" secondAttribute="trailing" constant="10" id="Zgh-FV-Eax"/>
-                                        <constraint firstItem="icG-G6-xnP" firstAttribute="top" secondItem="zEW-vq-A4z" secondAttribute="top" constant="30" id="cCb-V3-9he"/>
+                                        <constraint firstItem="icG-G6-xnP" firstAttribute="top" secondItem="zEW-vq-A4z" secondAttribute="top" constant="18" id="cCb-V3-9he"/>
                                     </constraints>
                                 </view>
                                 <prototypes>
@@ -80,8 +77,8 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x9s-Qj-2PZ">
-                                                            <rect key="frame" x="10" y="288.5" width="104" height="23"/>
-                                                            <fontDescription key="fontDescription" name="Merriweather-Regular" family="Merriweather" pointSize="18"/>
+                                                            <rect key="frame" x="10" y="288.5" width="91" height="21.5"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -158,7 +155,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="exW-GP-6dY">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="375"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="373.5"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BZe-xO-Key">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="250"/>
@@ -178,9 +175,9 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uun-dc-1a8">
-                                                <rect key="frame" x="20" y="342" width="104" height="23"/>
-                                                <fontDescription key="fontDescription" name="Merriweather-Regular" family="Merriweather" pointSize="18"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Uun-dc-1a8">
+                                                <rect key="frame" x="20" y="342" width="91" height="21.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -193,7 +190,7 @@
                                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="HbH-NZ-8Q5" secondAttribute="trailing" constant="20" id="BrP-gb-hCN"/>
                                             <constraint firstItem="mQT-GC-107" firstAttribute="leading" secondItem="HbH-NZ-8Q5" secondAttribute="leading" id="It1-kR-Zuj"/>
                                             <constraint firstAttribute="trailing" secondItem="BZe-xO-Key" secondAttribute="trailing" id="VuY-AX-O23"/>
-                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Uun-dc-1a8" secondAttribute="trailing" constant="10" id="XY9-x5-Knh"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Uun-dc-1a8" secondAttribute="trailing" constant="20" id="XC8-Yy-vJa"/>
                                             <constraint firstItem="Uun-dc-1a8" firstAttribute="leading" secondItem="mQT-GC-107" secondAttribute="leading" id="bpe-iX-Fbu"/>
                                             <constraint firstItem="BZe-xO-Key" firstAttribute="leading" secondItem="exW-GP-6dY" secondAttribute="leading" id="eBn-GA-6sr"/>
                                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="mQT-GC-107" secondAttribute="trailing" constant="10" id="gMr-Qx-2tZ"/>

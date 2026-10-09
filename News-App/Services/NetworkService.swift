@@ -8,46 +8,51 @@
 import Foundation
 
 
-class NetworkService {
-    
-    
-    static let shared = NetworkService()
-    
-    let placesURL = "https://newsapi.org/v2/top-headlines?country=us&apiKey=7849e66def6847bba1acef775f537ccd"
-    
-    func getNews(completionHandler: ((APIResponse?) -> Void)?) {
-        httpGet(placesURL, completionHandler: completionHandler)
-    }
-    
-    
-    private func httpGet<T: Decodable>(_ url:String, completionHandler : ((T?) -> Void)?)  {
-        guard let url = URL(string: url) else { return }
-        let task = URLSession.shared.dataTask(with: url, completionHandler: { [self]
-            (data, response, error) in
-            guard error == nil else {
-                print(error!.localizedDescription)
-                return
-            }
-            guard let data = data else { return }
-            let news: T? = self.parseJSON(data: data)
-            completionHandler?(news)
+enum NetworkError: LocalizedError {
+    case api(String)
+    case badResponse
 
-        })
-        task.resume()
-    }
-    
-   private func parseJSON<T: Decodable>(data: Data) -> T? {
-        let decoder = JSONDecoder()
-        decoder.keyDecodingStrategy = .convertFromSnakeCase
-        let type = T.self
-        do {
-            return try decoder.decode(type, from: data)
-        } catch let error as NSError {
-            print(String(describing: error))
+    var errorDescription: String? {
+        switch self {
+        case .api(let message): return message
+        case .badResponse: return "The server returned an unexpected response."
         }
-        
-        return nil
     }
-    private init() {}
 }
 
+final class NetworkService: Sendable {
+
+
+    static let shared = NetworkService()
+
+    private let newsURL = URL(string: "https://newsapi.org/v2/top-headlines?country=us")!
+    private let apiKey = "7849e66def6847bba1acef775f537ccd"
+
+    func getNews() async throws -> [Article] {
+        var request = URLRequest(url: newsURL)
+        request.setValue(apiKey, forHTTPHeaderField: "X-Api-Key")
+        let response: APIResponse = try await httpGet(request)
+        // NewsAPI leaves stubs titled "[Removed]" in place of withdrawn articles.
+        return (response.articles ?? []).filter { $0.title != "[Removed]" }
+    }
+
+
+    private func httpGet<T: Decodable>(_ request: URLRequest) async throws -> T {
+        let (data, response) = try await URLSession.shared.data(for: request)
+        // Errors come as JSON too: {"status": "error", "message": "..."}.
+        if let failure = try? JSONDecoder().decode(APIResponse.self, from: data),
+           failure.status == "error", let message = failure.message {
+            throw NetworkError.api(message)
+        }
+        guard let http = response as? HTTPURLResponse, (200..<300).contains(http.statusCode) else {
+            throw NetworkError.badResponse
+        }
+        do {
+            return try JSONDecoder().decode(T.self, from: data)
+        } catch {
+            throw NetworkError.badResponse
+        }
+    }
+
+    private init() {}
+}

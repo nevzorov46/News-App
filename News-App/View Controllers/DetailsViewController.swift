@@ -6,29 +6,38 @@
 //
 
 import UIKit
+import SafariServices
 import SDWebImage
 
-class DetailsViewController: UIViewController, UITextViewDelegate {
+class DetailsViewController: UIViewController {
 
-    let placeholderURL = "https://www.industry.gov.au/sites/default/files/August%202018/image/news-placeholder-738.png"
     @IBOutlet weak var header: UILabel!
     @IBOutlet weak var source: UILabel!
     @IBOutlet weak var descr: UILabel!
     @IBOutlet weak var image: UIImageView!
 
     var news: Article?
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         if let news = news {
-            let imageURL = URL(string: news.urlToImage ?? placeholderURL)
-            image.sd_setImage(with: imageURL, placeholderImage: UIImage(named: "Placeholder"), completed: nil)
+            image.sd_setImage(with: news.imageURL, placeholderImage: UIImage(named: "Placeholder"), completed: nil)
             header.text = news.title
-            source.text = news.source.name
-            descr.text = news.content ?? news.description
+            source.text = news.source?.name
+            descr.text = news.text
+            if let url = news.webURL {
+                addOpenButton(url)
+            }
         }
-    
+
     }
-    
+
+    // The API gives only the beginning of an article, the rest is on the publisher's site.
+    private func addOpenButton(_ url: URL) {
+        let open = UIAction(title: "Read Full Article", image: UIImage(systemName: "safari")) { [weak self] _ in
+            self?.present(SFSafariViewController(url: url), animated: true)
+        }
+        navigationItem.rightBarButtonItem = UIBarButtonItem(primaryAction: open)
+    }
 
 }
